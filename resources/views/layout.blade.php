@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Laravel</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <title>mr erisso - Simple website Template</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
+
+	@yield('navbar')
 
 	@yield('content')
 

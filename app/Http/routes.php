@@ -15,6 +15,10 @@ Route::get('/', 'PagesController@home');
 
 Route::get('/productos', 'PagesController@productos');
 
+//Route::get('productos', 'ProductosController@index');
+//Route::get('productos/{producto}', 'ProductosController@show');
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
