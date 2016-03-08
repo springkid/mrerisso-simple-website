@@ -8,11 +8,11 @@ class PagesController extends Controller
 {
     // home
 	public function home() {
-		 return view('welcome');
+		 return view('pages.welcome');
 	}
 
 	public function productos() {
-		return 'Productos page here';
+		return view('pages.productos');
 	}
 
 }
