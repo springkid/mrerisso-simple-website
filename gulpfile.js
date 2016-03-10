@@ -12,5 +12,6 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
-});
+    var bootstrapPath = 'node_modules/bootstrap-sass/assets'; mix.sass('app.scss') .copy(bootstrapPath + '/fonts', 'public/fonts') .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js'); 
+}); 
+		/* See more at: http://transmission.vehikl.com/adding-twitter-bootstrap-to-your-laravel-5-app/#sthash.izV7n2xx.dpuf*/
