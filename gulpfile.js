@@ -14,11 +14,13 @@ var elixir = require('laravel-elixir');
 /* See more at: http://transmission.vehikl.com/adding-twitter-bootstrap-to-your-laravel-5-app/ */
 elixir(function(mix) {
     var bootstrapPath = 'node_modules/bootstrap-sass/assets'; 
-    var materialBootstrapPath = 'node_modules/bootstrapmaterial-design/dist';     
+    var materialBootstrapPath = 'node_modules/bootstrapmaterial-design/dist';  
+    var jqueryPath = 'resources/assets/vendor/jquery';  
     mix.sass('app.scss')
+    	.copy(jqueryPath + '/dist/jquery.min.js', 'public/js')
     	.copy(bootstrapPath + '/fonts', 'public/fonts')
     	.copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js')
     	.copy(materialBootstrapPath + '/css', 'public/css')
     	.copy(materialBootstrapPath + '/js', 'public/js')
-    	.browserify('app.js'); 
+    	//.browserify('app.js'); 
 });
