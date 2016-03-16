@@ -16,10 +16,10 @@ class CreateProductosTable extends Migration
             //
             $table->increments('id');
             $table->string('nombre');
-            $table->text('descripcion');
-            $table->json('aperturas');
-            $table->json('caracteristicas');
-            $table->json('icono');
+            $table->text('descripcion')->default('Descripción');
+            $table->json('aperturas')->nullable();
+            $table->json('caracteristicas')->nullable();
+            $table->json('icono')->nullable();
             $table->timestamps();
         });
     }
